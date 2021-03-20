@@ -113,10 +113,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\DataContext.cs" />
+    <Compile Include="Hooks\GenerateReportHooks.cs" />
     <Compile Include="Hooks\Search_Hooks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\Common_Steps.cs" />
     <Compile Include="Steps\Search_Steps.cs" />
+    <Compile Include="Tools\ReportLogs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\Search.feature" />
@@ -124,7 +126,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Tools\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="extent-config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
