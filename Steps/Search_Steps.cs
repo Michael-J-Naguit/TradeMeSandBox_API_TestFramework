@@ -24,6 +24,11 @@ namespace TradeMeSandBox_API_TestFramework.Steps
         {
             _data.client = new RestClient(_data.searchGeneralURL);
             _data.client.Authenticator = OAuth1Authenticator.ForProtectedResource(_data.consumerKey, _data.consumerSecret, _data.oAuthToken, _data.oAuthTokenSecret);
+
+            /*
+            _data.client = new RestClient(_data.searchGeneralURL);
+            _data.client.Proxy = new WebProxy("prodproxy.test1.net:8080");
+            _data.client.Proxy.Credentials = System.Net.CredentialCache.DefaultCredentials; */
         }
 
         [Given(@"Setup General Search request parameters")]
